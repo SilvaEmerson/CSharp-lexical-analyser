@@ -1,13 +1,37 @@
-// A Hello World! program in C#.
 using System;
-namespace HelloWorld{
-    class Hello {
-        static void Main() {
-            Console.WriteLine("Hello World!");
 
-            // Keep the console window open in debug mode.
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
-        }
-    }
+public class Animal
+{
+   private string raca;
+
+   public Animal(string raca)
+   {
+      Raca = raca;
+   }
+
+   public string Raca
+   {
+      get { return raca; }
+      set { raca = value; }
+   }
+
+   public void Respirar()
+   {
+      // …
+   }
+}
+
+public class Cachorro : Animal
+{
+   public Cachorro(string raca) : base(raca) {}
+}
+
+public class Application
+{
+   static void Main()
+   {
+      Cachorro cachorro = new Cachorro("beagle");
+
+      cachorro.Respirar();
+   }
 }
